@@ -235,7 +235,7 @@ class Program
             pointer_y = (pointer_y + direction_y + y_len[pointer_x]) % y_len[pointer_x];}
         }
         
-        //Console.ReadLine();
+        Console.WriteLine();
     }
 
 

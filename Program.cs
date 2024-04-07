@@ -57,13 +57,13 @@ class Program
         dirs.Add((0,-1));
         //Instruction_field_printer(instruction_field);
         while (true) {
-            
+            //field.Instruction_field_printer(instruction_field);
             /*Console.Write("Pointer x: " + pointer_x);
             Console.Write(" ");
             Console.Write("Pointer y: " + pointer_y);
             Console.Write(" ");*/
             char current_instruction = instruction_field[pointer_y, pointer_x];
-            /*Console.WriteLine("Command: " + current_instruction);
+            /*  Console.WriteLine("Command: " + current_instruction);
             Console.WriteLine();*/
             if (int.TryParse(Convert.ToString(current_instruction), out int value))
             {
@@ -145,7 +145,17 @@ class Program
 
             }else if (current_instruction == '/')
             {
-                value_stack.push(value_stack.pop() / value_stack.pop());
+                int y = value_stack.pop();  
+                int x = value_stack.pop();
+                try
+                {
+                    value_stack.push(y/x);
+                }
+                catch (System.Exception)
+                {
+                    value_stack.push(0);
+                }
+                value_stack.push(0);
 
             }else if (current_instruction == '%')
             {
@@ -217,7 +227,7 @@ class Program
             }
             else if (current_instruction == '.')
             {
-                Console.WriteLine((int)value_stack.pop());
+                Console.Write((int)value_stack.pop());
             }
             else if (current_instruction == ',') {
                 Console.Write((char)value_stack.pop());

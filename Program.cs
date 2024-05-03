@@ -155,7 +155,6 @@ class Program
                 {
                     value_stack.push(0);
                 }
-                value_stack.push(0);
 
             }else if (current_instruction == '%')
             {

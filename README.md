@@ -32,7 +32,7 @@ v"Hello World!"<
 ^,_@
 ```
   
-`*` This loop prints `characters` from the stack until it's `empty`. It's akin to the following `Python` snippet:
+`*` This loop prints `characters` from the stack until it's `empty` and then terminating. It's akin to the following `Python` snippet:
   
 ```
 while not stack.isEmpty():

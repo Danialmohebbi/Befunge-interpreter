@@ -3,7 +3,7 @@
 **How to use**
 ---
 * Before proceeding, ensure you are familiar with the `instructions` applicable to
-`Befunge 93`, as opposed to `Befunge 98`. The nuances between the two versions
+[Befunge 93](https://codeberg.org/catseye/Befunge-93/src/branch/master/doc/Befunge-93.markdown), as opposed to [Befunge 98](https://esolangs.org/wiki/Funge-98). The nuances between the two versions
 can affect program behavior significantly. 
   
 * Ensure that the content adheres to the syntax and regulations of `Befunge 93`.

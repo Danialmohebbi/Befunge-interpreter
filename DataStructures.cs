@@ -41,9 +41,7 @@ class Stack{
 /// this class represents the main 2D array which will be used for reading the instructions.
 /// </summary>
 class Field{
-    public char[,] instruction_field = new char[25,80];    
-    int[] x_len = new int[25];
-    int[] y_len = new int[80];
+    public char[,] instruction_field = new char[25,80];   
     int pointer_x;
     int pointer_y;
     public int direction_x;

@@ -1,13 +1,12 @@
 ﻿using DataStructures;
-using utilities;
+using static Utilities;
 
-Utilities utilities = new();
 Field field = new();
 
 //main loop
 try
 {
-    string fileName = utilities.processArguments(args);
+    string fileName = Utilities.processArguments(args);
     field.processFile(fileName); 
     field.eval(); 
 

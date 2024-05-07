@@ -1,4 +1,4 @@
-using utilities;
+using static Utilities;
 
 namespace DataStructures
 {
@@ -54,7 +54,6 @@ class Field{
     (int, int) UP = (0, -1);
     (int,int)[] directions = {(1,0), (-1,0), (0,1), (0,-1)};
     
-    Utilities utilities = new();
     Stack stack = new Stack();
 
     Random r = new();
@@ -179,6 +178,7 @@ class Field{
     /// </summary>
     /// <returns>null</returns>
     public void eval(){
+        
         bool running = true;
 
         while (running){
@@ -188,10 +188,10 @@ class Field{
                 stack.push(value);
             }
             else if ("+-/*%!`".Contains(currentInstruction)){
-                utilities.evaluateArithmatics(currentInstruction, ref stack);
+                Utilities.evaluateArithmatics(currentInstruction, ref stack);
             }
             else if (".,".Contains(currentInstruction)){
-                utilities.output(currentInstruction, ref stack);
+                Utilities.output(currentInstruction, ref stack);
             }
             else if (">v^?<".Contains(currentInstruction)){
                 changeDirection(currentInstruction);
@@ -203,7 +203,7 @@ class Field{
                 evaluateDirection(currentInstruction, ref stack);
             }
             else if ("&~".Contains(currentInstruction)){
-                utilities.evaluateInput(currentInstruction, ref stack, ref running);
+                Utilities.evaluateInput(currentInstruction, ref stack, ref running);
             }
             else if (currentInstruction == '"'){
                 updatePointers(direction_x,direction_y);
@@ -218,7 +218,7 @@ class Field{
                 }
             }
             else if (":\\$".Contains(currentInstruction)){
-                utilities.evaluateStack(currentInstruction, ref stack);
+                Utilities.evaluateStack(currentInstruction, ref stack);
             }
             else if (currentInstruction == 'g'){
                 int y = stack.pop();
@@ -242,6 +242,7 @@ class Field{
             updatePointers(direction_x, direction_y);
 
         }
+        Console.WriteLine();
     }
     }
 
